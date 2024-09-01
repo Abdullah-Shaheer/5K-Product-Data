@@ -36,9 +36,9 @@ for page in range(1, num_pages + 1):
                 'productImage': product.get('productImage')
             })
 
-    if not product_list:
-        print(f"No more products found on page {page}. Ending scraping.")
-        break
+        if not product_list:
+            print(f"No more products found on page {page}. Ending scraping.")
+            break
 
 df = pd.DataFrame(all_products)
 
